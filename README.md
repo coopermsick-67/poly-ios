@@ -5,6 +5,7 @@ Signal Slate tracks Polymarket's all-time sports leaderboard, scores up to 1,000
 ## What it includes
 
 - A native SwiftUI iPhone and iPad app with a daily picks board, trader search and profiles, open sports positions, sampled settled results, and a visible scoring explanation.
+- A React Native Expo version in `expo/` that uses the same public feed and can be previewed in Expo Go without a Mac.
 - A Node.js snapshot job using Polymarket's public Data API and Gamma sports catalog. It pages the all-time `SPORTS` leaderboard, reads open positions and up to 100 recent closed positions per wallet, estimates sampled win rate, and writes `docs/daily-picks.json`.
 - A GitHub Actions workflow that refreshes that JSON every day at 13:15 UTC and supports manual runs.
 - A separate GitHub Actions workflow and Fastlane lane that build and upload an iOS archive to TestFlight.
@@ -23,6 +24,10 @@ The generation job uses public endpoints only and needs no Polymarket credential
 ## Build locally in Xcode
 
 Open `PolymarketEdge.xcodeproj` in Xcode 15 or newer, choose the `PolymarketEdge` scheme and an iOS 17 or newer simulator, then run. The checked-in bundle identifier is a placeholder. For a device build, change `com.yourcompany.PolymarketEdge` to a reverse-DNS identifier registered to your Apple Developer team. In the app, use the settings button to enter a public `daily-picks.json` URL if you are not using the included GitHub workflow.
+
+## Preview in Expo Go without a Mac
+
+The second implementation is in [`expo/`](expo/README.md). The quickest path is to open `expo/App.js` in a browser, add `expo-document-picker` and `expo-file-system` to a new Snack at [snack.expo.dev](https://snack.expo.dev), choose iOS, then scan Snack's QR code with Expo Go. Expo Go is free and this version does not need a custom native build. The Expo app also imports and analyzes a TXT list of up to 2,000 wallet addresses on-device. A Windows or Linux computer can run it with `cd expo && npm install && npx expo start --tunnel`.
 
 ## Upload to TestFlight
 
