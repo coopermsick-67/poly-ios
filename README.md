@@ -10,7 +10,7 @@ Signal Slate tracks Polymarket's all-time sports leaderboard, scores up to 1,000
 - A GitHub Actions workflow that refreshes that JSON every day at 13:15 UTC and supports manual runs.
 - A separate GitHub Actions workflow and Fastlane lane that build and upload an iOS archive to TestFlight.
 
-The trader score is 40% PnL rank, 30% recent settled win rate with a neutral four-result prior, 15% sports volume rank, and 15% open-position rank. Daily picks require at least two tracked wallets and 55% score-weighted support. Each profile's win rate is based on the returned sample, not lifetime performance.
+The trader score is 40% PnL rank, 30% recent settled win rate with a neutral four-result prior, 15% sports volume rank, and 15% open-position rank. Daily picks require at least two tracked wallets and 55% score-weighted support. Each profile's win rate is based on the returned sample, not lifetime performance. Wallet scores are shown on a 0.0–100.0 scale to one decimal place and are relative to the imported comparison cohort, so scores from different lists are not directly comparable.
 
 ## Run the daily feed
 
