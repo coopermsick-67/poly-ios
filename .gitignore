@@ -1,0 +1,10 @@
+.DS_Store
+.build/
+DerivedData/
+build/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+vendor/bundle
+*.xcuserstate
+xcuserdata/

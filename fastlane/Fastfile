@@ -1,0 +1,72 @@
+require 'base64'
+require 'tmpdir'
+
+default_platform(:ios)
+
+platform :ios do
+  lane :beta do
+    required = %w[
+      APP_STORE_CONNECT_KEY_ID
+      APP_STORE_CONNECT_ISSUER_ID
+      APP_STORE_CONNECT_KEY_P8_BASE64
+      APPLE_TEAM_ID
+      IOS_BUNDLE_IDENTIFIER
+      GITHUB_REPOSITORY
+    ]
+    missing = required.select { |name| ENV[name].to_s.empty? }
+    UI.user_error!("Missing GitHub Actions secrets/environment: #{missing.join(', ')}") unless missing.empty?
+
+    key_id = ENV.fetch('APP_STORE_CONNECT_KEY_ID')
+    issuer_id = ENV.fetch('APP_STORE_CONNECT_ISSUER_ID')
+    team_id = ENV.fetch('APPLE_TEAM_ID')
+    bundle_id = ENV.fetch('IOS_BUNDLE_IDENTIFIER')
+    repository = ENV.fetch('GITHUB_REPOSITORY')
+    branch = ENV.fetch('GITHUB_DEFAULT_BRANCH', 'main')
+    build_number = ENV.fetch('GITHUB_RUN_NUMBER', '1')
+
+    key_path = File.join(Dir.tmpdir, "AuthKey_#{key_id}.p8")
+    File.binwrite(key_path, Base64.decode64(ENV.fetch('APP_STORE_CONNECT_KEY_P8_BASE64')))
+
+    begin
+      api_key = app_store_connect_api_key(
+        key_id: key_id,
+        issuer_id: issuer_id,
+        key_content: ENV.fetch('APP_STORE_CONNECT_KEY_P8_BASE64'),
+        is_key_content_base64: true,
+        duration: 1200,
+        in_house: false
+      )
+
+      snapshot_url = "https://raw.githubusercontent.com/#{repository}/#{branch}/docs/daily-picks.json"
+      xcargs = [
+        '-allowProvisioningUpdates',
+        "-authenticationKeyPath #{key_path}",
+        "-authenticationKeyID #{key_id}",
+        "-authenticationKeyIssuerID #{issuer_id}",
+        "DEVELOPMENT_TEAM=#{team_id}",
+        "PRODUCT_BUNDLE_IDENTIFIER=#{bundle_id}",
+        "INFOPLIST_KEY_PolymarketSnapshotURL=#{snapshot_url}"
+      ].join(' ')
+
+      increment_build_number(build_number: build_number, xcodeproj: 'PolymarketEdge.xcodeproj')
+
+      build_app(
+        project: 'PolymarketEdge.xcodeproj',
+        scheme: 'PolymarketEdge',
+        clean: true,
+        export_method: 'app-store',
+        output_directory: 'build',
+        output_name: 'SignalSlate.ipa',
+        xcargs: xcargs
+      )
+
+      upload_to_testflight(
+        api_key: api_key,
+        skip_waiting_for_build_processing: true,
+        distribute_external: false
+      )
+    ensure
+      File.delete(key_path) if File.exist?(key_path)
+    end
+  end
+end

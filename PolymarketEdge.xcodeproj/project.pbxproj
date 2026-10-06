@@ -1,0 +1,146 @@
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+		A10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A10000000000000000000002 = { CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = A10000000000000000000071 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = ( en, Base, );
+			mainGroup = A10000000000000000000031;
+			productRefGroup = A10000000000000000000033 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ( A10000000000000000000002 /* Signal Slate */ );
+		};
+
+		A10000000000000000000002 /* Signal Slate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000072 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (
+				A10000000000000000000041 /* Sources */,
+				A10000000000000000000042 /* Frameworks */,
+				A10000000000000000000043 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = PolymarketEdge;
+			productName = "Signal Slate";
+			productReference = A10000000000000000000028 /* Signal Slate.app */;
+			productType = "com.apple.product-type.application";
+		};
+
+		A10000000000000000000011 /* PolymarketEdgeApp.swift in Sources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000021 /* PolymarketEdgeApp.swift */; };
+		A10000000000000000000012 /* AppStore.swift in Sources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000022 /* AppStore.swift */; };
+		A10000000000000000000013 /* Models.swift in Sources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000023 /* Models.swift */; };
+		A10000000000000000000014 /* Views.swift in Sources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000024 /* Views.swift */; };
+		A10000000000000000000017 /* PreviewContent.swift in Sources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000027 /* PreviewContent.swift */; };
+		A10000000000000000000015 /* Assets.xcassets in Resources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000025 /* Assets.xcassets */; };
+		A10000000000000000000016 /* PrivacyInfo.xcprivacy in Resources */ = { isa = PBXBuildFile; fileRef = A10000000000000000000026 /* PrivacyInfo.xcprivacy */; };
+
+		A10000000000000000000021 /* PolymarketEdgeApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymarketEdgeApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000022 /* AppStore.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000023 /* Models.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A10000000000000000000024 /* Views.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		A10000000000000000000027 /* PreviewContent.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
+		A10000000000000000000025 /* Assets.xcassets */ = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000026 /* PrivacyInfo.xcprivacy */ = { isa = PBXFileReference; lastKnownFileType = text.xml; path = Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A10000000000000000000028 /* Signal Slate.app */ = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signal Slate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		A10000000000000000000031 = {
+			isa = PBXGroup;
+			children = ( A10000000000000000000032 /* PolymarketEdge */, A10000000000000000000033 /* Products */ );
+			sourceTree = "<group>";
+		};
+		A10000000000000000000032 /* PolymarketEdge */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000021 /* PolymarketEdgeApp.swift */,
+				A10000000000000000000022 /* AppStore.swift */,
+				A10000000000000000000023 /* Models.swift */,
+				A10000000000000000000024 /* Views.swift */,
+				A10000000000000000000027 /* PreviewContent.swift */,
+				A10000000000000000000025 /* Assets.xcassets */,
+				A10000000000000000000026 /* PrivacyInfo.xcprivacy */,
+			);
+			path = PolymarketEdge;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000033 /* Products */ = { isa = PBXGroup; children = ( A10000000000000000000028 /* Signal Slate.app */, ); name = Products; sourceTree = "<group>"; };
+
+		A10000000000000000000041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( A10000000000000000000011, A10000000000000000000012, A10000000000000000000013, A10000000000000000000014, A10000000000000000000017, );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000042 /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A10000000000000000000043 /* Resources */ = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( A10000000000000000000015, A10000000000000000000016, ); runOnlyForDeploymentPostprocessing = 0; };
+
+		A10000000000000000000051 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_STRICT_OBJC_MSGSEND = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_OPTIMIZATION_LEVEL = 0; GCC_PREPROCESSOR_DEFINITIONS = ( "DEBUG=1", "$(inherited)", ); IPHONEOS_DEPLOYMENT_TARGET = 17.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A10000000000000000000052 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; ENABLE_NS_ASSERTIONS = NO; ENABLE_STRICT_OBJC_MSGSEND = YES; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; }; name = Release; };
+		A10000000000000000000061 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Signal Slate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_PolymarketSnapshotURL = "https://raw.githubusercontent.com/replace-me/replace-me/main/docs/daily-picks.json";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PolymarketEdge;
+				PRODUCT_NAME = "Signal Slate";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Debug; };
+		A10000000000000000000062 /* Release */ = { isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Signal Slate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_PolymarketSnapshotURL = "https://raw.githubusercontent.com/replace-me/replace-me/main/docs/daily-picks.json";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PolymarketEdge;
+				PRODUCT_NAME = "Signal Slate";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Release; };
+
+		A10000000000000000000071 /* Build configuration list for PBXProject */ = { isa = XCConfigurationList; buildConfigurations = ( A10000000000000000000051, A10000000000000000000052, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A10000000000000000000072 /* Build configuration list for PBXNativeTarget */ = { isa = XCConfigurationList; buildConfigurations = ( A10000000000000000000061, A10000000000000000000062, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+	};
+	rootObject = A10000000000000000000001 /* Project object */;
+}
