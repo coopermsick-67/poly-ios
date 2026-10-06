@@ -23,7 +23,7 @@ The generation job uses public endpoints only and needs no Polymarket credential
 
 ## Build locally in Xcode
 
-Open `PolymarketEdge.xcodeproj` in Xcode 15 or newer, choose the `PolymarketEdge` scheme and an iOS 17 or newer simulator, then run. The checked-in bundle identifier is a placeholder. For a device build, change `com.yourcompany.PolymarketEdge` to a reverse-DNS identifier registered to your Apple Developer team. In the app, use the settings button to enter a public `daily-picks.json` URL if you are not using the included GitHub workflow.
+Open `PolymarketEdge.xcodeproj` in Xcode 15 or newer, choose the `PolymarketEdge` scheme and an iOS 17 or newer simulator, then run. The checked-in bundle identifier is a placeholder. For a device build, change `com.yourcompany.PolymarketEdge` to a reverse-DNS identifier registered to your Apple Developer team. In the app, use the settings button to enter a public `daily-picks.json` URL if you are not using the included GitHub workflow. In the native iOS Traders tab, use **Import TXT & scan up to 2,000 wallets** to open the companion scanner.
 
 ## Preview in Expo Go without a Mac
 
