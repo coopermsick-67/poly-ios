@@ -317,7 +317,7 @@ struct ScoreBadge: View {
 
     var body: some View {
         VStack(spacing: 1) {
-            Text(String(format: "%.0f", score))
+            Text(String(format: "%.1f", score))
                 .font(.system(size: compact ? 15 : 22, weight: .bold, design: .rounded))
             if !compact {
                 Text("SCORE")
