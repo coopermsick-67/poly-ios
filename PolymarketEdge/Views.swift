@@ -385,6 +385,21 @@ struct TradersView: View {
                     }
                     .padding(.top, 16)
 
+                    Link(destination: URL(string: "https://signal-slate.coopdogg67.chatgpt.site/#wallet-scan")!) {
+                        HStack(spacing: 9) {
+                            Image(systemName: "doc.text.magnifyingglass")
+                            Text("Import TXT & scan up to 2,000 wallets")
+                            Spacer(minLength: 4)
+                            Image(systemName: "arrow.up.right")
+                        }
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(AppColors.lime)
+                        .padding(12)
+                        .background(AppColors.surface, in: RoundedRectangle(cornerRadius: 12))
+                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(AppColors.line, lineWidth: 1))
+                    }
+                    .buttonStyle(.plain)
+
                     HStack(spacing: 9) {
                         Image(systemName: "magnifyingglass").foregroundStyle(AppColors.muted)
                         TextField("Search name or wallet", text: $searchText)
