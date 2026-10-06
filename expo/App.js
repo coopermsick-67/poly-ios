@@ -1026,7 +1026,7 @@ function PickCard({ pick }) {
 function ScoreBadge({ score }) {
   return (
     <View style={styles.scoreBadge}>
-      <Text style={styles.scoreValue}>{Math.round(number(score))}</Text>
+      <Text style={styles.scoreValue}>{number(score).toFixed(1)}</Text>
       <Text style={styles.scoreLabel}>SCORE</Text>
     </View>
   );
@@ -1082,7 +1082,7 @@ function TradersScreenHeader({ search, setSearch }) {
 
 function TraderRow({ trader, onPress }) {
   return (
-    <Pressable style={styles.traderRow} onPress={onPress} accessibilityRole="button" accessibilityLabel={`Trader ${trader.name}, score ${Math.round(number(trader.score))}`}>
+    <Pressable style={styles.traderRow} onPress={onPress} accessibilityRole="button" accessibilityLabel={`Trader ${trader.name}, score ${number(trader.score).toFixed(1)} out of 100`}>
       <Text style={styles.traderRank}>{String(trader.rank || 0).padStart(3, '0')}</Text>
       <View style={styles.flexOne}>
         <Text numberOfLines={1} style={styles.traderName}>{trader.name || 'Anonymous trader'}</Text>
